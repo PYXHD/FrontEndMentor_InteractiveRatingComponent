@@ -1,0 +1,119 @@
+@font-face {
+  font-family: Overpass;
+  src: url(../fonts/Overpass/Overpass-VariableFont_wght.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 15px;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: none;
+          flex-direction: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: none;
+  height: 100vh;
+  padding: 24px;
+  background-color: black;
+}
+
+main {
+  max-width: 410px;
+  background-color: #121417;
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: none;
+      -ms-flex-align: none;
+          align-items: none;
+  gap: 20px;
+}
+.rating_icon {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  padding: 15px;
+  background-color: #252d37;
+}
+.rating_title {
+  font-family: Overpass;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: none;
+  color: #ffffff;
+}
+.rating_text {
+  font-family: Overpass;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 25px;
+  color: #959eac;
+}
+.rating_choices {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: none;
+}
+.rating_choices .choice {
+  height: 50px;
+  width: 50px;
+  border: none;
+  border-radius: 50%;
+  background-color: #252d37;
+  font-family: Overpass;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: none;
+  color: #959eac;
+}
+.rating_submit {
+  height: 45px;
+  border: none;
+  border-radius: 23px;
+  background-color: #fb7413;
+  font-family: Overpass;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: none;
+  color: #121417;
+  letter-spacing: 2px;
+}/*# sourceMappingURL=index.css.map */

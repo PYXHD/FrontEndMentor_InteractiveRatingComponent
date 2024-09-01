@@ -1,0 +1,54 @@
+// Font
+@font-face {
+  font-family: Overpass;
+  src: url(../fonts/Overpass/Overpass-VariableFont_wght.ttf);
+}
+
+// Font weights
+$fontNormal: 400;
+$fontBold: 700;
+
+// Colors variables
+$white: #ffffff;
+$lightGray: #959eac;
+$darkBlue: #252d37;
+$veryDarkBlue: #121417;
+$orange: #fb7413;
+
+// Mixins
+@mixin fontSet($family, $size, $weight, $lineHeigth, $color) {
+  font-family: $family;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $lineHeigth;
+  color: $color;
+}
+@mixin displaySet($display, $flexDir, $justif, $align, $gap) {
+  display: $display;
+  flex-direction: $flexDir;
+  justify-content: $justif;
+  align-items: $align;
+  gap: $gap;
+}
+
+// General settings
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 15px;
+}
+body {
+  @include displaySet(flex, none, center, center, none);
+  height: 100vh;
+  padding: 24px;
+  background-color: black;
+}
+main {
+  max-width: 410px;
+  background-color: $veryDarkBlue;
+  border-radius: 20px;
+  padding: 30px;
+}

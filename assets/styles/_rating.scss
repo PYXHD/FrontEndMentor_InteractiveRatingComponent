@@ -1,0 +1,36 @@
+.rating {
+  @include displaySet(flex, column, center, none, 20px);
+  &_icon {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    padding: 15px;
+    background-color: $darkBlue;
+  }
+  &_title {
+    @include fontSet(Overpass, 1.8rem, $fontBold, none, $white);
+  }
+  &_text {
+    @include fontSet(Overpass, 1rem, $fontNormal, 25px, $lightGray);
+  }
+  &_choices {
+    @include displaySet(flex, row, space-between, center, none);
+
+    .choice {
+      height: 50px;
+      width: 50px;
+      border: none;
+      border-radius: 50%;
+      background-color: $darkBlue;
+      @include fontSet(Overpass, 1rem, $fontBold, none, $lightGray);
+    }
+  }
+  &_submit {
+    height: 45px;
+    border: none;
+    border-radius: 23px;
+    background-color: $orange;
+    @include fontSet(Overpass, 1rem, $fontBold, none, $veryDarkBlue);
+    letter-spacing: 2px;
+  }
+}
