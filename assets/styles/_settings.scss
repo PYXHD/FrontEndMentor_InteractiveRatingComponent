@@ -41,14 +41,23 @@ html {
   font-size: 15px;
 }
 body {
-  @include displaySet(flex, none, center, center, none);
+  @include displaySet(flex, null, center, center, null);
   height: 100vh;
   padding: 24px;
   background-color: black;
 }
 main {
-  max-width: 410px;
+  width: 410px;
+  height: 415px;
   background-color: $veryDarkBlue;
-  border-radius: 20px;
-  padding: 30px;
+  border-radius: 26px;
+  padding: 32px;
+}
+
+// Active / Unactive containers
+.activeContainer {
+  @include displaySet(flex, column, space-between, null, null);
+}
+.unactiveContainer {
+  display: none;
 }

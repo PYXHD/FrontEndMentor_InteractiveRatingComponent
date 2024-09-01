@@ -1,36 +1,62 @@
 .rating {
-  @include displaySet(flex, column, center, none, 20px);
+  height: 100%;
+  width: 100%;
+  // default: .activeContainer (_settings.scss)
+
   &_icon {
-    height: 50px;
-    width: 50px;
+    height: 48px;
+    width: 48px;
     border-radius: 50%;
     padding: 15px;
     background-color: $darkBlue;
   }
+  &_subcontainer {
+    @include displaySet(flex, column, space-between, null, 22px);
+  }
   &_title {
-    @include fontSet(Overpass, 1.8rem, $fontBold, none, $white);
+    @include fontSet(Overpass, 1.8rem, $fontBold, null, $white);
   }
   &_text {
-    @include fontSet(Overpass, 1rem, $fontNormal, 25px, $lightGray);
+    @include fontSet(Overpass, 1rem, $fontNormal, 22px, $lightGray);
   }
   &_choices {
-    @include displaySet(flex, row, space-between, center, none);
+    @include displaySet(flex, row, space-between, center, null);
 
     .choice {
+      position: relative;
+      cursor: pointer;
       height: 50px;
       width: 50px;
       border: none;
       border-radius: 50%;
       background-color: $darkBlue;
-      @include fontSet(Overpass, 1rem, $fontBold, none, $lightGray);
+      @include fontSet(Overpass, 1rem, $fontBold, null, $lightGray);
+      overflow: hidden;
+      transition: 0.2s ease;
+
+      &.choiceHovered {
+        background-color: $orange;
+        color: $darkBlue;
+      }
+      &.choiceActived {
+        background-color: $white;
+        color: $darkBlue;
+      }
     }
   }
   &_submit {
+    cursor: pointer;
     height: 45px;
     border: none;
     border-radius: 23px;
     background-color: $orange;
-    @include fontSet(Overpass, 1rem, $fontBold, none, $veryDarkBlue);
+    @include fontSet(Overpass, 1rem, $fontBold, null, $veryDarkBlue);
     letter-spacing: 2px;
+    transition: 0.2s ease;
+
+    &.submitHovered {
+      background-color: $white;
+      color: $darkBlue;
+    }
   }
 }
