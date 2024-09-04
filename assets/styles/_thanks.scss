@@ -1,0 +1,30 @@
+.thanks {
+  // default class: .unactiveContainer (_settings.scss)
+  height: 100%;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  &_img {
+    height: 110px;
+    width: 165px;
+    margin: 0 auto;
+  }
+  &_rate {
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 25px;
+    padding: 6px;
+    background-color: $darkBlue;
+    @include fontSet(Overpass, 1rem, $fontBold, 22px, $orange);
+    text-align: center;
+  }
+  &_title {
+    @include fontSet(Overpass, 1.8rem, $fontBold, null, $white);
+    text-align: center;
+  }
+  &_text {
+    @include fontSet(Overpass, 1rem, $fontNormal, 22px, $lightGray);
+    text-align: center;
+  }
+}

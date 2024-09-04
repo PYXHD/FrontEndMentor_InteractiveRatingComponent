@@ -1,7 +1,10 @@
 const RatingApp = {
     rated: null,
+    finalRate: document.getElementById("finalRate"),
     rateChoices: document.querySelectorAll(".choice"),
     submitBtn: document.getElementById("submit"),
+    ratingContainer: document.getElementById("rating"),
+    thanksContainer: document.getElementById("thanks"),
 
     // Add and Remove functions
     addClass(element, className) {
@@ -9,6 +12,14 @@ const RatingApp = {
     },
     removeClass(element, className) {
         element.classList.remove(className);
+    },
+
+    // Toggle containers function
+    toggleContainers(activeElement, inactiveElement) {
+        this.addClass(inactiveElement, "unactiveContainer");
+        this.removeClass(inactiveElement, "activeContainer");
+        this.addClass(activeElement, "activeContainer");
+        this.removeClass(activeElement, "unactiveContainer");
     },
 
     // States functions
@@ -36,6 +47,15 @@ const RatingApp = {
         this.submitBtn.addEventListener("mouseout", () => {
             this.removeClass(this.submitBtn, "submitHovered");
         });
+        this.submitBtn.addEventListener("click", () => {
+            if (this.rated === null) {
+                alert("Veuillez sélectionner une note")
+            } else {
+                this.toggleContainers(this.thanksContainer, this.ratingContainer);
+
+                this.finalRate.textContent = `${this.rated}`;
+            }
+        })
     },
 
     // Init function

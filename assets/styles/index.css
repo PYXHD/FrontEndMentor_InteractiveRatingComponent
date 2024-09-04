@@ -146,4 +146,44 @@ main {
 .rating_submit.submitHovered {
   background-color: #ffffff;
   color: #252d37;
+}
+
+.thanks {
+  height: 100%;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.thanks_img {
+  height: 110px;
+  width: 165px;
+  margin: 0 auto;
+}
+.thanks_rate {
+  width: 60%;
+  margin: 0 auto;
+  border-radius: 25px;
+  padding: 6px;
+  background-color: #252d37;
+  font-family: Overpass;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 22px;
+  color: #fb7413;
+  text-align: center;
+}
+.thanks_title {
+  font-family: Overpass;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+}
+.thanks_text {
+  font-family: Overpass;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 22px;
+  color: #959eac;
+  text-align: center;
 }/*# sourceMappingURL=index.css.map */
